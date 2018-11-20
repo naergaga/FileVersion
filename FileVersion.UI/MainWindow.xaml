@@ -1,0 +1,27 @@
+﻿<Window x:Class="FileVersion.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileVersion.UI"
+        mc:Ignorable="d"
+        Title="GetFileVersion" Height="450" Width="800">
+    <DockPanel AllowDrop="True" Drop="DockPanel_Drop">
+        <StackPanel DockPanel.Dock="Top">
+        <DockPanel>
+            <Button Name="BtnGet" DockPanel.Dock="Right" Click="Button_Click">获取</Button>
+            <TextBox Name="TbFile"></TextBox>
+        </DockPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Name="Check1" IsChecked="True" VerticalAlignment="Center"></CheckBox>
+                <Label>添加参数</Label>
+                <TextBox Name="TbQueryTmp" Width="100">?v={0}</TextBox>
+                <Label>参数样式</Label>
+            </StackPanel>
+        </StackPanel>
+        <Grid>
+            <DataGrid Name="DataGrid1">
+            </DataGrid>
+        </Grid>
+    </DockPanel>
+</Window>
